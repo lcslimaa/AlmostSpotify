@@ -1,0 +1,49 @@
+body {
+  background-color: #181818;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1263ff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.navbar {
+  background-color: #232323;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: calc(100vw - 300px);
+  right: 0;
+  text-align: center;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  height: 40px;
+  font-size: 20px;
+  position: relative;
+  margin-top: 10px;
+}
+
+progress {
+  width: 600px;
+  height: 10px;
+  margin-bottom: auto;
+}
+
+.slider {
+  height: 1px;
+  background-color: white;
+  margin-right: 20px;
+}
