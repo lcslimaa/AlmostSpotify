@@ -1,4 +1,4 @@
-var audioElement = new Audio("music/RocketPunch.mp3");
+var audioElement = new Audio("music/Self Made.mp3");
 var isPlaying = false;
 var progress = document.getElementById("progress");
 var volumeBar = document.getElementById("volume");
@@ -30,6 +30,7 @@ function pauseMusic() {
 
 audioElement.addEventListener("timeupdate", function () {
   progress.value = audioElement.currentTime / audioElement.duration;
+  console.log(audioElement.currentTime);
 });
 
 volumeBar.addEventListener("input", function (e) {
