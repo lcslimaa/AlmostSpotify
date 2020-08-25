@@ -1,7 +1,7 @@
-var audioElement = new Audio("music/RocketPunch.mp3");
+var audioElement = new Audio('music/RocketPunch.mp3');
 var isPlaying = false;
-var progress = document.getElementById("progress");
-var volumeBar = document.getElementById("volume");
+var progress = document.getElementById('progress');
+var volumeBar = document.getElementById('volume');
 
 function togglePlay() {
   isPlaying ? audioElement.pause() : audioElement.play();
@@ -15,10 +15,10 @@ audioElement.onpause = function () {
   isPlaying = false;
 };
 
-audioElement.addEventListener("timeupdate", function () {
+audioElement.addEventListener('timeupdate', function () {
   progress.value = audioElement.currentTime / audioElement.duration;
 });
 
-volumeBar.addEventListener("change", function (e) {
+volumeBar.addEventListener('input', function (e) {
   audioElement.volume = e.currentTarget.value / 100;
 });

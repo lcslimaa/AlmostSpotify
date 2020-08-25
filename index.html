@@ -12,12 +12,24 @@
   <body>
     <div class="sidenav"></div>
     <div class="navbar">
-      <button id="ppbutton" onClick="togglePlay()">
-        <i class="far fa-play-circle"></i>
-      </button>
+      <div>
+        <!-- Capa do álbum -->
+      </div>
 
-      <progress id="progress" value="0"></progress>
-      <input type="range" id="volume" min="0" max="100" class="slider" />
+      <div>
+        <div>
+          <button id="ppbutton" onClick="togglePlay()">
+            <i class="far fa-play-circle"></i>
+          </button>
+        </div>
+        <div>
+          <progress id="progress" value="0"></progress>
+        </div>
+      </div>
+
+      <div>
+        <input type="range" id="volume" min="0" max="100" class="slider" />
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

@@ -22,6 +22,18 @@ body {
   width: calc(100vw - 300px);
   right: 0;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 75px;
+}
+
+.navbar div {
+  border: 1px solid red;
+}
+
+#volume {
+  height: 100%;
 }
 
 button {
@@ -31,15 +43,14 @@ button {
   outline: none;
   cursor: pointer;
   height: 40px;
-  font-size: 20px;
+  font-size: 30px;
   position: relative;
-  margin-top: 10px;
+  margin: 5px;
 }
 
 progress {
   width: 600px;
   height: 10px;
-  margin-bottom: auto;
 }
 
 .slider {
