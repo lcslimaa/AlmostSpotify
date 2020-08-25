@@ -9,7 +9,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #1263ff;
+  background-color: #6441a5;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -25,36 +25,73 @@ body {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  height: 75px;
-}
-
-.navbar div {
-  border: 1px solid red;
+  height: 70px;
 }
 
 #volume {
-  height: 100%;
+  margin-top: 35px;
+  height: 10px;
 }
 
 button {
   border: 0;
   background-color: transparent;
-  color: white;
+  color: #ffffff;
   outline: none;
   cursor: pointer;
   height: 40px;
-  font-size: 30px;
+  font-size: 20px;
   position: relative;
   margin: 5px;
 }
 
 progress {
   width: 600px;
-  height: 10px;
+  height: 5px;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #181818;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(
+      -45deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+    -webkit-linear-gradient(left, #6441a5, #6441a5);
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
 .slider {
-  height: 1px;
-  background-color: white;
   margin-right: 20px;
+}
+
+input[type="range"] {
+  overflow: hidden;
+  width: 100px;
+  -webkit-appearance: none;
+  background-color: #181818;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: ew-resize;
+  background: #c4c4c4;
+  box-shadow: -80px 0 0 80px #6441a5;
 }
