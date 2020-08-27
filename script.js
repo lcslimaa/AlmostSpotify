@@ -1,4 +1,4 @@
-var audioElement = new Audio("music/Self Made.mp3");
+var audioElement = new Audio("music/ARY - Childhood Dreams (Cover by Seraphine).mp3");
 var isPlaying = false;
 var progress = document.getElementById("progress");
 var volumeBar = document.getElementById("volume");
