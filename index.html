@@ -1,31 +1,30 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AlmostSpotify</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-  </head>
-  <body>
 
-      <div class="grid-container">
-        <div class="card">
-          <div class="container">
-            <img src="images/alecking.jpg" alt="foto" id="imagem">
-          </div>
-        </div>
-  
-    </div>
-    
-    <div class="sidenav"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlmostSpotify</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
 
-    <div class="navbar">
-      <div>
-        <!-- Capa do álbum -->
+<body>
+
+  <div class="grid-container">
+    <div class="card">
+      <div class="container">
+        <img src="images/alecking.jpg" alt="foto" id="imagem">
       </div>
+    </div>
+
+  </div>
+
+  <div class="sidenav"></div>
+
+  <div class="navbar">
+    <div>
+      <!-- Capa do álbum -->
+    </div>
 
     <div>
       <div>
@@ -34,14 +33,15 @@
         </button>
       </div>
       <div>
-        <progress id="progress" value="0">
+        <input type="range" id="seek_slider" min="1" max="100" value="0" class="seek_slider">
       </div>
     </div>
 
     <div>
-      <input type="range" id="volume" min="0" max="100" class="slider" />
+      <input type="range" id="volume" min="0" max="100" value="50" class="slider" />
     </div>
   </div>
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

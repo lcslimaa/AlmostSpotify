@@ -1,12 +1,8 @@
-var audioElement = new Audio("music/ARY - Childhood Dreams (Cover by Seraphine).mp3");
+var audioElement = new Audio("music/Self Made.mp3");
 var isPlaying = false;
-var progress = document.getElementById("progress");
+var seek_slider = document.getElementById("seek_slider");
 var volumeBar = document.getElementById("volume");
 var ppbutton = document.getElementById("playIcon");
-
-function togglePlay() {
-  isPlaying ? pauseMusic() : playMusic();
-}
 
 audioElement.onplaying = function () {
   isPlaying = true;
@@ -15,6 +11,22 @@ audioElement.onplaying = function () {
 audioElement.onpause = function () {
   isPlaying = false;
 };
+
+seek_slider.addEventListener("change", function () {
+  seekto = audioElement.duration * (seek_slider.value / 100);
+  audioElement.currentTime = seekto;
+  console.log(seekto);
+});
+
+audioElement.addEventListener("timeupdate", function () {
+  seekPosition = audioElement.currentTime * (seek_slider.max / audioElement.duration);
+  seek_slider.value = seekPosition;
+  /*seek_slider.value = (audioElement.currentTime / audioElement.duration) * parseInt(seek_slider.max);*/
+});
+
+volumeBar.addEventListener("input", function (e) {
+  audioElement.volume = e.currentTarget.value / 100;
+});
 
 function playMusic() {
   audioElement.play();
@@ -28,11 +40,6 @@ function pauseMusic() {
   ppbutton.classList.add("fas", "fa-play");
 }
 
-audioElement.addEventListener("timeupdate", function () {
-  progress.value = audioElement.currentTime / audioElement.duration;
-  console.log(audioElement.currentTime);
-});
-
-volumeBar.addEventListener("input", function (e) {
-  audioElement.volume = e.currentTarget.value / 100;
-});
+function togglePlay() {
+  isPlaying ? pauseMusic() : playMusic();
+}
